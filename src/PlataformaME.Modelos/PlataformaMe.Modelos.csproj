@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E9F5F3F4-BD14-4983-9936-1E5324177DA8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>PlataformaMe.Modelos</RootNamespace>
+    <AssemblyName>PlataformaMe.Modelos</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="ServiceStack.Common">
+      <HintPath>..\..\lib\ServiceStack.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces">
+      <HintPath>..\..\lib\ServiceStack.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Text">
+      <HintPath>..\..\lib\ServiceStack.Text.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MyClass.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Interfaces\IPertenezcoMonitoreo.cs" />
+    <Compile Include="Interfaces\IPertenezcoAuditoria.cs" />
+    <Compile Include="Interfaces\IEntidad.cs" />
+    <Compile Include="Interfaces\ISaveResponse.cs" />
+    <Compile Include="Interfaces\IServiceResponse.cs" />
+    <Compile Include="Interfaces\ServiceResponse.cs" />
+    <Compile Include="Interfaces\Crear.cs" />
+    <Compile Include="Interfaces\ICrearResponse.cs" />
+    <Compile Include="Interfaces\Borrar.cs" />
+    <Compile Include="Interfaces\IBorrarResponse.cs" />
+    <Compile Include="Entidades\Auditoria.cs" />
+    <Compile Include="Entidades\Log.cs" />
+    <Compile Include="Peticiones\LogConsultar.cs" />
+    <Compile Include="Peticiones\LogCrear.cs" />
+    <Compile Include="Interfaces\IConsultaEntidad.cs" />
+    <Compile Include="Interfaces\IAlmacenaEntidad.cs" />
+    <Compile Include="Interfaces\IAlmacenAuditoria.cs" />
+    <Compile Include="Interfaces\IAlmacenLog.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+    <Folder Include="Entidades\" />
+    <Folder Include="Peticiones\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
