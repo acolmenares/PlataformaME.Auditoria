@@ -78,8 +78,8 @@ namespace PlataformaMe.WebHost
 										c.Resolve<ICacheClient>(), MONITOREO))).ReusedWithin(ReuseScope.Request);
 
 
-			CrearTablaseEnMonitoreo(connectionFactory);
-			CrearTablasEnAuditoria(connectionFactory);
+			//CrearTablaseEnMonitoreo(connectionFactory);
+			//CrearTablasEnAuditoria(connectionFactory);
 
 
 		}
@@ -87,8 +87,7 @@ namespace PlataformaMe.WebHost
 		void ConfigureRoutes()
 		{
 
-			Routes.Add<LogConsultar>("/log/consultar", ApplyTo.Get);
-			Routes.Add<LogCrear>("/log/crear", ApplyTo.Post);
+			Routes.Add<AuditoriaConsultar>("/auditoria/consultar", ApplyTo.Get);
 
 		}
 
@@ -110,21 +109,21 @@ namespace PlataformaMe.WebHost
 
 		void CrearTablasEnAuditoria(OrmLiteConnectionFactory dbfactory)
 		{
-			var overwrite = false;
+			//var overwrite = false;
 			using (var con = dbfactory.Open(AUDITORIA))
 			{
 
-				con.CreateTable<Log>(overwrite);
+				//con.CreateTable<Log>(overwrite);
 			}
 		}
 
 
 		void CrearTablaseEnMonitoreo(OrmLiteConnectionFactory dbfactory)
 		{
-			var overwrite = false;
+			//var overwrite = false;
 			using (var con = dbfactory.Open(MONITOREO))
 			{
-				con.CreateTable<Auditoria>(overwrite);
+				//con.CreateTable<Auditoria>(overwrite);
 			}
 		}
 

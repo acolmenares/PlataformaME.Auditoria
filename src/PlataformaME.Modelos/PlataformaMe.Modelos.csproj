@@ -53,7 +53,7 @@
     <Compile Include="Interfaces\IBorrarResponse.cs" />
     <Compile Include="Entidades\Auditoria.cs" />
     <Compile Include="Entidades\Log.cs" />
-    <Compile Include="Peticiones\LogConsultar.cs" />
+    <Compile Include="Peticiones\AuditoriaConsultar.cs" />
     <Compile Include="Peticiones\LogCrear.cs" />
     <Compile Include="Interfaces\IConsultaEntidad.cs" />
     <Compile Include="Interfaces\IAlmacenaEntidad.cs" />

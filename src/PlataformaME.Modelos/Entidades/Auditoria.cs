@@ -1,12 +1,11 @@
 ﻿using System;
-using ServiceStack;
 using ServiceStack.DataAnnotations;
 
 namespace PlataformaMe.Modelos
 {
 	//[NamedConnection("Monitoreo")]
 	[Alias("auditoria")]
-	public class Auditoria : IEntidad, IPertenezcoMonitoreo
+	public class Auditoria : IEntidad  //, IPertenezcoAuditoria
 	{
 
 		[Alias("idauditoria")]
@@ -21,19 +20,17 @@ namespace PlataformaMe.Modelos
 		[Alias("tabla_auditoria")]
 		public string Tabla { get; set; }
 
-		[Alias("accion_uaditoria")]
+		[Alias("accion_auditoria")]
 		public string Accion { get; set; }
 
-		[Alias("setencia_auditoria")]
+		[Alias("sentencia_auditoria")]
 		public string SQL { get; set; }
 
-		/*
-		[Alias("ip_auditoria")]
-		public string IP  { get; set; }
+		[Alias("direccionip_auditoria")]
+		public string IP { get; set; }
 
-		[Alias("idtabla_auditoria")]
-		public int? TablaId  { get; set; }
-        */
+		//[Alias("idtabla_auditoria")]
+		//public int? TablaId  { get; set; }
 
 	}
 }

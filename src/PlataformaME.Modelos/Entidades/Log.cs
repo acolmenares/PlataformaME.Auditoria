@@ -4,9 +4,10 @@ using ServiceStack.DataAnnotations;
 
 namespace PlataformaMe.Modelos
 {
+	/*
 	//[Alias("auditoria")]
 	//[NamedConnection("Auditoria")]
-	public class Log : IEntidad, IPertenezcoAuditoria
+    public class Log : IEntidad, IPertenezcoAuditoria
 	{
 		[AutoIncrement]
 		public int Id { get; set;}
@@ -29,14 +30,15 @@ namespace PlataformaMe.Modelos
 		//[Alias("setencia_auditoria")]
 		public string SQL { get; set; }
 
-		/*
-		[Alias("ip_auditoria")]
-		public string IP  { get; set; }
+		
+		//[Alias("ip_auditoria")]
+		//public string IP  { get; set; }
 
-		[Alias("idtabla_auditoria")]
-		public int? TablaId  { get; set; }
-        */
+		//[Alias("idtabla_auditoria")]
+		//public int? TablaId  { get; set; }
+        
 
 	}
+	*/
 }
 
